@@ -94,6 +94,7 @@ Rails.application.routes.draw do
 
   scope controller: :static do
     get :about
+    get :map
     get :thank_you
     get :faq
     get :terms

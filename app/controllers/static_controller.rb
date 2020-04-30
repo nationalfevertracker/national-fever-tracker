@@ -5,6 +5,9 @@ class StaticController < ApplicationController
   def about
   end
 
+  def map
+  end
+  
   def faq
   end
 
