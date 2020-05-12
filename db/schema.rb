@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_185251) do
+ActiveRecord::Schema.define(version: 2020_05_10_063800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -226,6 +226,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_185251) do
     t.boolean "sore_throat", default: false, null: false
     t.boolean "difficulty_breathing", default: false, null: false
     t.boolean "fatigue", default: false, null: false
+    t.boolean "is_unsubscribed", default: false
   end
 
   create_table "tracker_reminders", force: :cascade do |t|
@@ -235,6 +236,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_185251) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "age"
     t.string "loc_zip"
+    t.boolean "is_unsubscribed", default: false
   end
 
   create_table "user_connected_accounts", force: :cascade do |t|
