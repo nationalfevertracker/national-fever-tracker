@@ -13,6 +13,18 @@ class TemperatureChecksController < ApplicationController
   # def show
   # end
 
+
+  def unsubscribe
+    if params[:email]
+      @tracker = TrackerReminder.find_by_email(params[:email])
+      @tracker.is_unsubscribed = true
+      @tracker.save!
+      @email = @tracker.email
+    else
+
+    end
+  end
+
   # GET /temperature_checks/new
   def new
     @temperature_check = TemperatureCheck.new
